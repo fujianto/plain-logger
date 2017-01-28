@@ -31,11 +31,7 @@ class Log_to_File implements Logger
 		return $this->content;
 	}
 
-	public function get_log() {
-		return self::content();
-	}
-
-	public function print_log($label = null, $content = null) {
+	private function write($label = null, $content = null) {
 		$this->get("a");
 		$this->set($label, $content);
 		$this->close();
@@ -61,11 +57,23 @@ class Log_to_File implements Logger
 		chmod($this->log, 0600);
 	}
 
-	public function clear_log() {
+	private function clear() {
 		echo "Clear Log file";
 		$this->get('r+');
 		ftruncate($this->file, 0);
 		$this->close();
 		exit();
+	}
+
+	public function print_log($label = null, $content = null) {
+		self::write($label, $content);
+	}
+	
+	public function get_log() {
+		return self::content();
+	}
+
+	public function clear_log() {
+		self::clear();
 	}
 }
