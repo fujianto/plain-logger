@@ -16,8 +16,8 @@ if (!class_exists('Plain_Logger')) {
 			$this->logger = $logger;
 		}
 
-		public function log($lable, $message) {
-			$this->logger->print_log($lable, $message);
+		public function log($label, $message) {
+			$this->logger->print_log($label, $message);
 		}
 
 		public function clear() {
