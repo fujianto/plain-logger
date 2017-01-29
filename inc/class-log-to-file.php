@@ -11,7 +11,13 @@ class Log_to_File implements Logger
 	function __construct() {
 		$this->log = PLAIN_LOGGER_DIR . $this->log;
 		add_action('wp_ajax_plainLogger-log-clear', array($this, 'clear_log'));
+		add_action('wp_ajax_plainLogger-log', array($this, 'ajax_get_log'));
 		add_filter('plainLogger-log', array($this, 'get_log'));
+	}
+
+	public function ajax_get_log() {
+		echo nl2br(self::get_log());
+		die();
 	}
 
 	private function get($permission = "a+") {

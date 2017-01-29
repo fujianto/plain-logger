@@ -57,7 +57,8 @@ if (!function_exists( 'plain_logger_100' ) ) {
 	}
 
 	function load_setting_page() {
-		require_once( PLAIN_LOGGER_DIR . 'admin/admin-init.php' );
+		// require_once( PLAIN_LOGGER_DIR . 'admin/admin-init.php' );
+		require_once( PLAIN_LOGGER_DIR . 'admin/setting-page.php' );
 	}
 
 	add_action('plugins_loaded', 'load_setting_page');
@@ -65,7 +66,7 @@ if (!function_exists( 'plain_logger_100' ) ) {
 	add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'plain_logger_action_links' );
 
 	function plain_logger_action_links( $links ) {
-		$links[] = '<a href="'. esc_url( get_admin_url(null, 'options-general.php?page=plainLogger') ) .'">'.__('Settings' , 'plainLogger').'</a>';
+		$links[] = '<a href="'. esc_url( get_admin_url(null, 'tools.php?page=plainLogger') ) .'">'.__('Settings' , 'plainLogger').'</a>';
 		// $links[] = '<a href="http://septianfujianto.com" target="_blank">More by Fujianto</a>';
 
 		return $links;
