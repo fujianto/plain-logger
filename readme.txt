@@ -53,8 +53,9 @@ To log event, use Plain_Logger::get_instance()->log("Log label", "Logging some e
 == Changelog ==
 
 = 1.1.1 =
-* Add new action to make it compatible on Theme frontend testing
-* Fix admin hiding submit button for other setting page
+* Add new action to make it compatible on Theme frontend testing.
+* Fix admin hiding submit button for other setting page.
+* Load plugin class faster to make the usable on other plugins / themes. 
 
 = 1.0.0 =
 * Initial release
