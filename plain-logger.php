@@ -3,7 +3,7 @@
  * Plugin Name: Plain logger
  * Plugin URI:  https://github.com/fujianto/plain-logger
  * Description: Easily log any event on your WordPress site to text file. When simple echo and var_dump just won't do.
- * Version:     1.1.1
+ * Version:     1.1.2
  * Author:      Septian Ahmad Fujianto
  * Author URI:  http://septianfujianto.com
  * @package    plainLogger

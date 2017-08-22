@@ -7,7 +7,7 @@ Tags: actions, activity, debugging, admin, best error log, best log viewer, best
 
 Requires at least: 3.9
 Tested up to: 4.7
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 
 == Description ==
 
