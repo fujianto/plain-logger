@@ -7,7 +7,7 @@ Tags: actions, activity, debugging, admin, best error log, best log viewer, best
 
 Requires at least: 3.9
 Tested up to: 4.7
-Stable tag: 1.0.0
+Stable tag: 1.1.1
 
 == Description ==
 
@@ -51,6 +51,10 @@ To log event, use Plain_Logger::get_instance()->log("Log label", "Logging some e
 1. ** Log view ** - Log view area where logged event / error will be displayed.
 
 == Changelog ==
+
+= 1.1.1 =
+* Add new action to make it compatible on Theme frontend testing
+* Fix admin hiding submit button for other setting page
 
 = 1.0.0 =
 * Initial release
