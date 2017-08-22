@@ -44,7 +44,7 @@ Click on "Tools > Plain Logger" in the sidebar.
 
 = How do I log event / error? =
 
-To log event, use Plain_Logger::get_instance()->log("Log label", "Logging some event"); on some WordPress hook or any place you want to log.
+To log event, use do_action( "plain_logger", "Log label", "Logging some event"); on some WordPress hook or any place you want to log.
 
 == Screenshots ==
 
