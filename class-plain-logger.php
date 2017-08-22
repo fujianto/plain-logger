@@ -10,6 +10,12 @@ if (!class_exists('Plain_Logger')) {
 			if ($this->logger == null) {
 				$this->logger = new Log_to_File;
 			} 
+
+		 	$this->register_callbacks();
+		}
+
+		protected function register_callbacks(){
+			add_action( 'plain_logger', array( $this, 'log' ), 10, 2);
 		}
 
 		public function set_logger(Logger $logger = null){

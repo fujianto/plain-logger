@@ -3,7 +3,7 @@
  * Plugin Name: Plain logger
  * Plugin URI:  https://github.com/fujianto/plain-logger
  * Description: Easily log any event on your WordPress site to text file. When simple echo and var_dump just won't do.
- * Version:     1.0.0
+ * Version:     1.1.1
  * Author:      Septian Ahmad Fujianto
  * Author URI:  http://septianfujianto.com
  * @package    plainLogger
@@ -27,9 +27,9 @@ if (!defined('PLAIN_LOGGER_DIR_URI')) {
 
 // For each version release, the priority needs to decrement by 1. This is so that
 // we can load newer versions earlier than older versions when there's a conflict.
-add_action( 'init', 'plain_logger_100', 9999 );
+add_action( 'init', 'plain_logger', 5);
 
-if (!function_exists( 'plain_logger_100' ) ) {
+if (!function_exists( 'plain_logger' ) ) {
 	/**
 	 * Loader function.  Note to change the name of this function to use the
 	 * current version number of the plugin.  `1.0.0` is `100`, `1.3.4` = `134`.
@@ -38,7 +38,7 @@ if (!function_exists( 'plain_logger_100' ) ) {
 	 * @access public
 	 * @return void
 	 */
-	function plain_logger_100() {
+	function plain_logger() {
 		// If not in the admin, bail.
 		if ( ! is_admin() )
 			return;

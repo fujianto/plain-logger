@@ -3,7 +3,7 @@
 jQuery(document).ready(function() {
 	// hide unwanted settings api element
 	jQuery('.field_plainLoggerArea').parent().prev().hide();
-	jQuery('.submit').hide();
+	jQuery('.field_plainLoggerArea').parent().parent().parent().parent().next().hide();
 
 	jQuery('.logReader-clean').click(function(){
 		var theButton 	= this;

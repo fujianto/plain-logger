@@ -65,7 +65,7 @@ function plain_logger_area_render(  ) {
 
 function plain_logger_settings_section_callback(  ) { 
 
-	echo __( 'Easily log any event on your WordPress site to text file. <br /> To log event, use <code>Plain_Logger::get_instance()->log("Log label", "Logging some event");</code> on some WordPress hook or any place you want to log.', 'plainLogger' );
+	echo __( 'Easily log any event on your WordPress site to text file. <br /> To log event, use <code>do_action( "plain_logger", "Log label", "Logging some event");</code> on some WordPress hook or any place you want to log.', 'plainLogger' );
 
 }
 
